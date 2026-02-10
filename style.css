@@ -1,0 +1,88 @@
+:root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --accent: #58a6ff;
+    --white: #ffffff;
+    --gray: #8b949e;
+    --border: #30363d;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--white);
+    font-family: -apple-system, system-ui, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    width: 100%;
+    text-align: center; 
+    font-size: 2.2rem;
+    margin: 60px 0 30px 0;
+    color: var(--white);
+    display: block;
+}
+
+.perfil-container {
+    text-align: center;
+    padding: 60px 20px;
+}
+.avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    margin-bottom: 20px;
+}
+.bio { color: var(--gray); font-size: 1.2rem; }
+.location { color: var(--accent); font-weight: bold; }
+
+.repos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90vw;
+    max-width: 1100px;
+}
+.repo-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.repo-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+.repo-card h4 { color: var(--accent); margin: 0; }
+.btn-link {
+    display: block;
+    background: #238636;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.followers-list {
+    display: flex;
+    justify-content: center; 
+    gap: 15px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+.follower-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    transition: 0.2s;
+}
+.follower-avatar:hover {
+    transform: scale(1.2);
+    border-color: var(--accent);
+}
