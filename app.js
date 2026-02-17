@@ -4,7 +4,7 @@ async function inicializarPortafolio() {
     try {
         const [resUser, resRepos, resFollowers] = await Promise.all([
             fetch(`https://api.github.com/users/${USERNAME}`),
-            fetch(`https://api.github.com/users/${USERNAME}/repos?sort=updated&per_page=20&type=owner&direction=desc`),
+            fetch(`https://api.github.com/users/${USERNAME}/repos?sort=updated&per_page=10&type=owner&direction=desc`),
             fetch(`https://api.github.com/users/${USERNAME}/followers?per_page=10`)
         ]);
 
